@@ -1,0 +1,287 @@
+html,
+body {
+  height: 100%;
+}
+
+/* Older browsers */
+html {
+  font-size: 16px;
+}
+
+/* Modern browsers only need this one */
+
+@media screen and (min-width: 25em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
+  }
+}
+
+/* Safari <8 and IE <11 */
+@media screen and (min-width: 25em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
+  }
+}
+@media screen and (min-width: 50em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+#bg-body {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40%;
+  min-width: 300px;
+  max-width: 1080px;
+  height: 80%;
+  min-height: 360px;
+  max-height: 1920px;
+  padding-left: 1%;
+  background: url("http://res.cloudinary.com/nasax2000/image/upload/v1507532168/noise_ziyd8k.png")
+    repeat;
+  border-radius: 10px;
+}
+
+#timer {
+  font-family: "Orbitron";
+  width: 97%;
+  height: 97%;
+  padding-top: 2%;
+}
+
+p {
+  margin: 0px;
+}
+
+#screenClock {
+  position: relative;
+  height: 50%;
+  background-color: #cfd1d0;
+  text-align: center;
+  border: 1px solid black;
+  border-color: rgba(0, 0, 255, 0.25);
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+
+#middleSec {
+  position: relative;
+  height: 25%;
+}
+
+#inputButtons {
+  position: relative;
+  height: 10%;
+}
+
+.box {
+  width: 32%;
+  height: 100%;
+  vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.box p {
+  padding-top: 20%;
+}
+
+#breakOutput {
+  float: left;
+  height: 75%;
+  width: 49%;
+  background-color: #cfd1d0;
+  border: 1px solid black;
+  border-color: rgba(0, 0, 255, 0.25);
+}
+
+#durOutput {
+  float: right;
+  height: 75%;
+  width: 49.6%;
+  background-color: #cfd1d0;
+  border: 1px solid black;
+  border-color: rgba(0, 0, 255, 0.25);
+}
+
+a {
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#lastSec {
+  margin-top: 8%;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.control {
+  padding: 2%;
+  display: table-cell;
+  text-align: center;
+}
+
+.num {
+  font-size: 2em;
+}
+
+.numUnits {
+  font-size: 1em;
+}
+
+.text {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: -10%;
+  padding-top: 20px;
+}
+
+.control {
+  color: #b3b3b3;
+  top: 90%;
+  font-size: 0.5em;
+}
+
+a.minusPlus {
+  color: #b3b3b3;
+  width: 30%;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 5%;
+}
+
+.box-output * {
+  height: 80%;
+  background-color: #cfd1d0;
+}
+
+.type {
+  position: relative;
+  top: -15px;
+  left: 20%;
+  background: #cfd1d0 none repeat scroll 0 0;
+  display: inline-block;
+  font-size: 0.7em;
+  width: 50%;
+  height: 40%;
+  text-align: center;
+  padding: 5px;
+}
+
+
+#inputBreakButtons {
+  float: left;
+  width: 50%;
+  height: 25%;
+}
+
+#inputDurButtons {
+  float: right;
+  width: 50%;
+  height: 25%;
+}
+
+#sub-break,
+#sub-dur {
+  float: left;
+  left: 10%;
+}
+
+#add-break,
+#add-dur {
+  float: right;
+  right: 10%;
+}
+
+.superBtn {
+  color: #0e0e0e;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  position: relative;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1),
+    0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1),
+    0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1),
+    0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+a.superBtn:after {
+  content: "";
+  display: block;
+  -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
+    0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3),
+    inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
+    0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3),
+    inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4),
+    0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: -1;
+}
+
+a.superBtn:hover {
+  color: #aeaeae;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0NTQ1NCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM3MzczOCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
+  background-size: 100%;
+  background-image: -webkit-gradient(
+    linear,
+    50% 0%,
+    50% 100%,
+    color-stop(0%, #545454),
+    color-stop(100%, #373738)
+  );
+  background-image: -moz-linear-gradient(#545454, #373738);
+  background-image: -webkit-linear-gradient(#545454, #373738);
+  background-image: linear-gradient(#545454, #373738);
+}
+
+a.superBtn:hover:after {
+  -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
+    0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3),
+    inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 15px 5px rgba(0, 255, 255, 0.2);
+  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
+    0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3),
+    inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 15px 5px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4),
+    0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
+}
+
+a.superBtn:active {
+  color: #00ccff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
+  background: #333;
+  -moz-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4),
+    inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9),
+    0 0 0 black;
+  -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4),
+    inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9),
+    0 0 0 black;
+  box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4),
+    inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9),
+    0 0 0 black;
+}

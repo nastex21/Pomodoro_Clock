@@ -1,0 +1,73 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+  <title>Pomodoro Timer</title>
+
+</head>
+
+<body>
+  <h1> Javascript Pomodoro Timer </h1>
+  <div id="bg-body">
+    <div id="timer">
+      <div id="screenClock">
+        <div id="box1" class="box">
+          <p id="hour" class="num"></p>
+          <p id="hourUnits" class="numUnits"></p>
+        </div>
+        <!-- div end box1 -->
+        <div id="box2" class="box">
+          <p id="minutes" class="num"></p>
+          <p id="minUnits" class="numUnits"></p>
+        </div>
+        <!-- div end box2 -->
+        <div id="box3" class="box">
+          <p id="seconds" class="num"></p>
+          <p id="secUnits" class="numUnits"></p>
+        </div>
+        <!-- div end box3 -->
+      </div>
+      <!-- div screenClock end -->
+      <div id="middleSec">
+        <div id="breakOutput" class="box-output">
+          <span id="break" class="type">Break</span>
+          <p id="bre" class="text">5</p>
+        </div>
+        <div id="durOutput" class="box-output">
+          <span id="duration" class="type">Duration</span>
+          <p id="dur" class="text">25</p>
+        </div>
+      </div>
+      <!-- end of middleSec -->
+      <div id="inputButtons">
+        <div id="inputBreakButtons" class="inputs">
+          <a class='superBtn minusPlus' id="sub-break" value="subBre">-</a>
+          <a class='superBtn minusPlus' id="add-break" value="addBre">+</a>
+        </div>
+        <div id="inputDurButtons" class="inputs">
+          <a class='superBtn minusPlus' id="sub-dur" value="subDur">-</a>
+          <a class='superBtn minusPlus' id="add-dur" value="addDur">+</a>
+        </div>
+      </div>
+      <!-- end of inputButtons -->
+      <div id="lastSec">
+        <a value="reset" id="resetButton" class='superBtn control'>RESET</a>
+        <a value="pause" id="pauseButton" class="superBtn control">PAUSE</a>
+        <a value="resume" id="resumeButton" class="superBtn control">RESUME</a>
+        <a value="start" id="startButton" class="superBtn control">START</a>
+      </div>
+      <!-- end of lastSec div-->
+    </div>
+    <!-- end of timer div -->
+  </div>
+  <!-- end of div bg-body -->
+
+  <audio id="myAudio"><source src="http://res.cloudinary.com/nasax2000/video/upload/v1505629993/kwahmah-02__alarm1.mp3" type="audio/mp3"></audio>
+  <!-- Load the CDN first -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
