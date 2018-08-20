@@ -1,6 +1,6 @@
 # Pomodoro_Timer
 
-demo: https://codepen.io/nasatex/pen/YxmGjm
+demo: https://codepen.io/nasatex/full/YxmGjm/
 
 A Pomodoro timer made in Javascript and Style.
 
