@@ -1,54 +1,123 @@
 html,
 body {
   height: 100%;
-}
-
-/* Older browsers */
-html {
-  font-size: 16px;
-}
-
-/* Modern browsers only need this one */
-
-@media screen and (min-width: 25em) {
-  html {
-    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
-  }
-}
-
-/* Safari <8 and IE <11 */
-@media screen and (min-width: 25em) {
-  html {
-    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
-  }
-}
-@media screen and (min-width: 50em) {
-  html {
-    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
-  }
+  width: 100%;
+  margin: 0;
 }
 
 h1 {
   text-align: center;
 }
 
-#bg-body {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 40%;
-  min-width: 300px;
-  max-width: 1080px;
-  height: 80%;
-  min-height: 360px;
-  max-height: 1920px;
-  padding-left: 1%;
-  background: url("http://res.cloudinary.com/nasax2000/image/upload/v1507532168/noise_ziyd8k.png")
-    repeat;
-  border-radius: 10px;
+#timer{
+  display: grid;
+  grid-template-rows: 50% 30% 10% 10%;
+  grid-template-areas: "screenClock" "middleSec" "inputButtons" "lastSec"
 }
 
-#timer {
+#screenClock{
+  grid-area: screenClock;
+  background-color: #cfd1d0;
+  text-align: center;
+  border: 1px solid black;
+  border-color: rgba(0, 0, 255, 0.25);
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "box1 box2 box3"
+}
+
+#box1{
+  grid-area: box1;
+}
+
+#box2{
+  grid-area: box2;
+}
+
+#box3{
+  grid-area: box3;
+}
+
+#middleSec {
+  grid-area: middleSec;
+  background-color: #cfd1d0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "breakoutput duroutput"
+}
+
+#breakOutput {
+  grid-area: breakoutput
+}
+
+#durOutput {
+  grid-area: duroutput
+}
+
+#inputButtons {
+  grid-area: inputButtons;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "inputbreakbuttons inputDurButtons"
+}
+
+#inputBreakButtons {
+  grid-area: inputbreakbuttons;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "sub-break add-break"
+}
+
+#sub-break{
+  grid-area: sub-break
+}
+
+#add-break {
+  grid-area: add-break;
+}
+
+#inputDurButtons {
+  grid-area: inputDurButtons;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "sub-dur add-dur"
+}
+
+#sub-dur {
+  grid-area: sub-dur
+}
+
+#add-dur {
+  grid-area: add-dur
+}
+
+#lastSec {
+  grid-area: lastSec;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "resetButton pauseButton resumeButton startButton"
+}
+
+#resetButton{
+  grid-area: resetButton
+}
+
+#pauseButton {
+  grid-area: pauseButton
+}
+
+#resuemButton{
+  grid-area: resumeButton
+}
+
+#startButton {
+  grid-area: startButton
+}
+
+/* #timer {
   font-family: "Orbitron";
   width: 97%;
   height: 97%;
@@ -284,4 +353,80 @@ a.superBtn:active {
   box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4),
     inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9),
     0 0 0 black;
+}
+
+ */
+
+@media only screen and (min-width: 700px){
+body{
+  background-color: blue;
+}
+
+#bg-body {
+  position: relative;
+  width: 95%;
+  height: 80%;
+  background: url("http://res.cloudinary.com/nasax2000/image/upload/v1507532168/noise_ziyd8k.png")
+    repeat;
+  border-radius: 10px;
+  margin-left: 2.5%;
+}
+
+#timer {
+  position: relative;
+  font-family: "Orbitron";
+  width: 97%;
+  height: 97%;
+  padding-top: 2%;
+  left: 1.5%;
+}
+
+#screenClock{
+  right: 2%;
+}
+
+#hour, #minutes, #seconds{
+  font-size: 15vw;
+  text-align: center;
+}
+
+#bre, #dur {
+  font-size: 100px;
+  text-align: center;
+}
+
+#hourUnits, #minUnits, #secUnits {
+  font-size: 50px;
+  text-align: center;
+}
+
+#break, #duration {
+  font-size: 30px;
+  background-color: #cfd1d0;
+  width: 30%;
+  text-align: center;
+}
+
+
+}
+
+@media only screen and (min-width: 1080px){
+  body{
+    background-color: red;
+  }
+   #bg-body {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 40%;
+    min-width: 300px;
+    max-width: 1080px;
+    height: 80%;
+    min-height: 360px;
+    max-height: 1920px;
+    padding-left: 1%;
+    background: url("http://res.cloudinary.com/nasax2000/image/upload/v1507532168/noise_ziyd8k.png")
+      repeat;
+    border-radius: 10px;
+  } 
 }
