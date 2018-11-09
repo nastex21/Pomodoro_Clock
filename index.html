@@ -43,20 +43,36 @@
       <!-- end of middleSec -->
       <div id="inputButtons">
         <div id="inputBreakButtons" class="inputs">
-          <a class='superBtn minusPlus' id="sub-break" value="subBre">-</a>
-          <a class='superBtn minusPlus' id="add-break" value="addBre">+</a>
+          <div class="divBtns">
+            <a class='superBtn minusPlus' id="sub-break" value="subBre">-</a>
+          </div>
+          <div class="divBtns">
+            <a class='superBtn minusPlus' id="add-break" value="addBre">+</a>
+          </div>
         </div>
         <div id="inputDurButtons" class="inputs">
-          <a class='superBtn minusPlus' id="sub-dur" value="subDur">-</a>
-          <a class='superBtn minusPlus' id="add-dur" value="addDur">+</a>
+          <div class="divBtns">
+            <a class='superBtn minusPlus' id="sub-dur" value="subDur">-</a>
+          </div>
+          <div class="divBtns">
+            <a class='superBtn minusPlus' id="add-dur" value="addDur">+</a>
+          </div>
         </div>
       </div>
       <!-- end of inputButtons -->
       <div id="lastSec">
-        <a value="reset" id="resetButton" class='superBtn control'>RESET</a>
-        <a value="pause" id="pauseButton" class="superBtn control">PAUSE</a>
-        <a value="resume" id="resumeButton" class="superBtn control">RESUME</a>
-        <a value="start" id="startButton" class="superBtn control">START</a>
+        <div class="divBtns bottomRow" id="bottomleftDiv">
+          <a value="reset" id="resetButton" class='superBtn control'>RESET</a>
+        </div>
+        <div class="divBtns bottomRow">
+          <a value="pause" id="pauseButton" class="superBtn control">PAUSE</a>
+        </div>
+        <div class="divBtns bottomRow">
+          <a value="resume" id="resumeButton" class="superBtn control">RESUME</a>
+        </div>
+        <div class="divBtns bottomRow" id="bottomRightDiv">
+          <a value="start" id="startButton" class="superBtn control">START</a>
+        </div>
       </div>
       <!-- end of lastSec div-->
     </div>
@@ -64,7 +80,8 @@
   </div>
   <!-- end of div bg-body -->
 
-  <audio id="myAudio"><source src="http://res.cloudinary.com/nasax2000/video/upload/v1505629993/kwahmah-02__alarm1.mp3" type="audio/mp3"></audio>
+  <audio id="myAudio">
+    <source src="http://res.cloudinary.com/nasax2000/video/upload/v1505629993/kwahmah-02__alarm1.mp3" type="audio/mp3"></audio>
   <!-- Load the CDN first -->
   <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>

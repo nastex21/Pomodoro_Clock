@@ -9,13 +9,23 @@ h1 {
   text-align: center;
 }
 
-#timer{
-  font-family: "Orbitron";
-  display: grid;
-  grid-template-areas: "screenClock" "middleSec" "inputButtons" "lastSec"
+#bg-body {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url("http://res.cloudinary.com/nasax2000/image/upload/v1507532168/noise_ziyd8k.png") repeat;
 }
 
-#screenClock{
+#timer {
+  font-family: "Orbitron";
+  display: grid;
+  grid-template-areas: "screenClock""middleSec""inputButtons""lastSec"
+}
+
+#screenClock {
   text-align: center;
   grid-area: screenClock;
   background-color: #cfd1d0;
@@ -32,15 +42,15 @@ h1 {
 
 
 
-#box1{
+#box1 {
   grid-area: box1;
 }
 
-#box2{
+#box2 {
   grid-area: box2;
 }
 
-#box3{
+#box3 {
   grid-area: box3;
 }
 
@@ -53,7 +63,9 @@ h1 {
   grid-template-areas: "breakoutput duroutput"
 }
 
-#hour, #minutes, #seconds {
+#hour,
+#minutes,
+#seconds {
   text-align: center;
 }
 
@@ -98,7 +110,7 @@ a {
   grid-template-areas: "sub-break add-break"
 }
 
-#sub-break{
+#sub-break {
   grid-area: sub-break
 }
 
@@ -121,15 +133,19 @@ a {
   grid-area: add-dur
 }
 
-#bre, #dur {
+#bre,
+#dur {
   text-align: center;
 }
 
-#hourUnits, #minUnits, #secUnits {
+#hourUnits,
+#minUnits,
+#secUnits {
   text-align: center;
 }
 
-#break, #duration {
+#break,
+#duration {
   text-align: center;
 }
 
@@ -140,7 +156,7 @@ a {
   grid-template-areas: "resetButton pauseButton resumeButton startButton"
 }
 
-#resetButton{
+#resetButton {
   grid-area: resetButton
 }
 
@@ -148,7 +164,7 @@ a {
   grid-area: pauseButton
 }
 
-#resuemButton{
+#resumeButton {
   grid-area: resumeButton
 }
 
@@ -156,7 +172,12 @@ a {
   grid-area: startButton
 }
 
-.superBtn {
+.divBtns {
+  position: relative;
+  display: flex;
+  margin: auto;
+  width: 100%;
+  height: 100%;
   text-align: center;
   color: #0e0e0e;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -174,7 +195,7 @@ a {
     0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-a.superBtn:after {
+.divBtns:after {
   content: "";
   display: block;
   -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
@@ -190,24 +211,22 @@ a.superBtn:after {
   z-index: -1;
 }
 
-a.superBtn:hover {
+.divBtns:hover {
   color: #aeaeae;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0NTQ1NCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM3MzczOCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
   background-size: 100%;
-  background-image: -webkit-gradient(
-    linear,
+  background-image: -webkit-gradient(linear,
     50% 0%,
     50% 100%,
     color-stop(0%, #545454),
-    color-stop(100%, #373738)
-  );
+    color-stop(100%, #373738));
   background-image: -moz-linear-gradient(#545454, #373738);
   background-image: -webkit-linear-gradient(#545454, #373738);
   background-image: linear-gradient(#545454, #373738);
 }
 
-a.superBtn:hover:after {
+.divBtns:hover:after {
   -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
     0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3),
     inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6),
@@ -221,7 +240,7 @@ a.superBtn:hover:after {
     inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
 }
 
-a.superBtn:active {
+.divBtns:active {
   color: #00ccff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
   background: #333;
@@ -237,260 +256,236 @@ a.superBtn:active {
 }
 
 
-/* 
+@media only screen and (max-width: 500px) {
 
-
-
-
-#lastSec {
-  margin-top: 8%;
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-.control {
-  padding: 2%;
-  display: table-cell;
-  text-align: center;
-}
-
-.num {
-  font-size: 2em;
-}
-
-.numUnits {
-  font-size: 1em;
-}
-
-.text {
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: -10%;
-  padding-top: 20px;
-}
-
-.control {
-  color: #b3b3b3;
-  top: 90%;
-  font-size: 0.5em;
-}
-
-a.minusPlus {
-  color: #b3b3b3;
-  width: 30%;
-  height: 20px;
-  line-height: 20px;
-  margin-top: 5%;
-}
-
-.box-output * {
-  height: 80%;
-  background-color: #cfd1d0;
-}
-
-.type {
-  position: relative;
-  top: -15px;
-  left: 20%;
-  background: #cfd1d0 none repeat scroll 0 0;
-  display: inline-block;
-  font-size: 0.7em;
-  width: 50%;
-  height: 40%;
-  text-align: center;
-  padding: 5px;
-}
-
-
-#inputBreakButtons {
-  float: left;
-  width: 50%;
-  height: 25%;
-}
-
-#inputDurButtons {
-  float: right;
-  width: 50%;
-  height: 25%;
-}
-
-#sub-break,
-#sub-dur {
-  float: left;
-  left: 10%;
-}
-
-#add-break,
-#add-dur {
-  float: right;
-  right: 10%;
-}
-
-.superBtn {
-  color: #0e0e0e;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-  font-weight: bold;
-  letter-spacing: 0.2em;
-  position: relative;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1),
-    0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1),
-    0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1),
-    0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
-}
-
-a.superBtn:after {
-  content: "";
-  display: block;
-  -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
-    0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3),
-    inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
-    0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3),
-    inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4),
-    0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4),
-    inset 0 1px 2px rgba(0, 0, 0, 0.6);
-  position: absolute;
-  z-index: -1;
-}
-
-a.superBtn:hover {
-  color: #aeaeae;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0NTQ1NCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM3MzczOCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
-  background-size: 100%;
-  background-image: -webkit-gradient(
-    linear,
-    50% 0%,
-    50% 100%,
-    color-stop(0%, #545454),
-    color-stop(100%, #373738)
-  );
-  background-image: -moz-linear-gradient(#545454, #373738);
-  background-image: -webkit-linear-gradient(#545454, #373738);
-  background-image: linear-gradient(#545454, #373738);
-}
-
-a.superBtn:hover:after {
-  -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
-    0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3),
-    inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6),
-    0 0 15px 5px rgba(0, 255, 255, 0.2);
-  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7),
-    0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3),
-    inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6),
-    0 0 15px 5px rgba(0, 255, 255, 0.2);
-  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4),
-    0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4),
-    inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
-}
-
-a.superBtn:active {
-  color: #00ccff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
-  background: #333;
-  -moz-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4),
-    inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9),
-    0 0 0 black;
-  -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4),
-    inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9),
-    0 0 0 black;
-  box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4),
-    inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9),
-    0 0 0 black;
-}
-
- */
-
-@media only screen and (max-width: 500px){
-body{
-  background-color: blue;
-}
-
-#bg-body {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 320px;
-  height: 400px;
-  background: url("http://res.cloudinary.com/nasax2000/image/upload/v1507532168/noise_ziyd8k.png")
-    repeat;
-  border-radius: 10px;
-}
-
-#timer {
-  position: relative;
-  width: 310px;
-  height: 390px;
-  padding-top: 10px;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  grid-template-rows: 195px 117px 39px 39px;
-}
-
-#screenClock{
-  
-}
-
-#hour, #minutes, #seconds{
-  font-size: 40px;
-}
-
-#bre, #dur {
-  font-size: 20px;
-}
-
-#hourUnits, #minUnits, #secUnits {
-  font-size: 10px;
-}
-
-#break, #duration {
-  font-size: 10px;
-  background-color: #cfd1d0;
-  width: 100%;
-}
-
-
-.control {
-  font-size: 10px;
-}
-
-.minusPlus{
-  font-size: 20px;
-}
-
-
-}
-
-@media only screen and (min-width: 1080px){
-  body{
-    background-color: red;
-  }
-   #bg-body {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 40%;
-    min-width: 300px;
-    max-width: 1080px;
-    height: 80%;
-    min-height: 360px;
-    max-height: 1920px;
-    padding-left: 1%;
-    background: url("http://res.cloudinary.com/nasax2000/image/upload/v1507532168/noise_ziyd8k.png")
-      repeat;
+  #bg-body {
+    width: 320px;
+    height: 400px;
     border-radius: 10px;
-  } 
-} 
+  }
+
+  #timer {
+    position: relative;
+    width: 310px;
+    height: 390px;
+    padding-top: 10px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    grid-template-rows: 195px 117px 39px 39px;
+  }
+
+  #hour,
+  #minutes,
+  #seconds {
+    font-size: 40px;
+  }
+
+  #bre,
+  #dur {
+    font-size: 20px;
+  }
+
+  #hourUnits,
+  #minUnits,
+  #secUnits {
+    font-size: 10px;
+  }
+
+  #break,
+  #duration {
+    font-size: 10px;
+    background-color: #cfd1d0;
+    width: 100%;
+  }
+
+
+  .control {
+    font-size: 10px;
+  }
+
+  .minusPlus {
+    font-size: 20px;
+  }
+
+  .text {
+    position: relative;
+    top: -30px;
+  }
+
+  .superBtn{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .bottomRow {
+    height: 38px;
+  }
+
+  #bottomLeftDiv {
+    border-bottom-left-radius: 10px;
+  }
+
+  #bottomRightDiv {
+   border-bottom-right-radius: 10px; 
+  }
+
+}
+
+@media only screen and (min-width: 501px) and   (max-width: 1080px) {
+  #bg-body {
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+  }
+
+  #timer {
+    position: relative;
+    width: 490px;
+    height: 590px;
+    padding-top: 10px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    grid-template-rows: 295px 177px 59px 59px;
+  }
+
+  #hour,
+  #minutes,
+  #seconds {
+    font-size: 55px;
+  }
+
+  #bre,
+  #dur {
+    font-size: 30px;
+  }
+
+  #hourUnits,
+  #minUnits,
+  #secUnits {
+    font-size: 15px;
+  }
+
+  #break,
+  #duration {
+    font-size: 15px;
+    background-color: #cfd1d0;
+    width: 100%;
+  }
+
+
+  .control {
+    font-size: 10px;
+  }
+
+  .minusPlus {
+    font-size: 25px;
+  }
+
+  .text {
+    position: relative;
+    top: -30px;
+  }
+
+  .superBtn{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .bottomRow {
+    height: 59px;
+  }
+
+  #bottomLeftDiv {
+    border-bottom-left-radius: 10px;
+  }
+
+  #bottomRightDiv {
+   border-bottom-right-radius: 10px; 
+  }
+}
+
+
+@media only screen and (min-width: 1080px) {
+  #bg-body {
+    width: 700px;
+    height: 800px;
+    border-radius: 10px;
+  }
+
+  #timer {
+    position: relative;
+    width: 690px;
+    height: 790px;
+    padding-top: 10px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    grid-template-rows: 395px 237px 79px 79px;
+  }
+
+  #hour,
+  #minutes,
+  #seconds {
+    font-size: 60px;
+  }
+
+  #bre,
+  #dur {
+    font-size: 35px;
+  }
+
+  #hourUnits,
+  #minUnits,
+  #secUnits {
+    font-size: 20px;
+  }
+
+  #break,
+  #duration {
+    font-size: 20px;
+    background-color: #cfd1d0;
+    width: 100%;
+  }
+
+
+  .control {
+    font-size: 15px;
+  }
+
+  .minusPlus {
+    font-size: 30px;
+  }
+
+  .text {
+    position: relative;
+    top: -30px;
+  }
+
+  .superBtn{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .bottomRow {
+    height: 78px;
+  }
+
+  #bottomLeftDiv {
+    border-bottom-left-radius: 10px;
+  }
+
+  #bottomRightDiv {
+   border-bottom-right-radius: 10px; 
+  }
+}
