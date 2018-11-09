@@ -79,7 +79,6 @@ $(document).ready(function () {
             var divide = Math.floor(convertMinutes / hour);
             var timeDiff = convertMinutes - hour * divide;
             var convertSecs = countdownBreak - (convertMinutes * 60);
-            console.log("convertSecs: " + convertSecs);
 
             if (countdownBreak <= 59 && countdownBreak >= 2) {
                 $("#hour").html(0);
@@ -127,15 +126,10 @@ $(document).ready(function () {
         }
 
         funcCountdown = setInterval(function () {
-            console.log("countdown: " + countdown); //countdown is minutes converted into seconds 25 * 60 for example
             var convertMin = Math.floor(countdown / 60); // convertMin is the seconds (countdown) divided by 60 and then using Math.floor
-            console.log("convertMin: " + convertMin);
             var divide = Math.floor(convertMin / hour);
             var timeDiff = convertMin - hour * divide;
-            console.log("divide: " + divide);
-            console.log("timeDiff: " + timeDiff);
             var convertSecs = countdown - (convertMin * 60);
-            console.log("convertSecs: " + convertSecs);
 
             if (countdown <= 59 && countdown >= 2) {
                 $("#minutes").html(0);
